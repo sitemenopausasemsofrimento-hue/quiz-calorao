@@ -3,17 +3,6 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 const META_PIXEL_ID = '873230481338340';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  if (req.method === 'GET' && req.query && req.query.diag === '1') {
-    const t = process.env.META_CAPI_TOKEN || '';
-    res.status(200).json({
-      definido: t.length > 0,
-      tamanho: t.length,
-      temEspacoOuQuebra: /\s/.test(t),
-      inicio: t.slice(0, 4),
-    });
-    return;
-  }
-
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
     return;
