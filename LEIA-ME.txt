@@ -1,0 +1,18 @@
+QUIZ XÔ CALORÃO — como publicar
+
+1. Suba esta pasta no mesmo lugar do quiz de hormônio (ela usa os mesmos arquivos de fonte
+   playfair-display.woff2, dm-sans.woff2 e a foto foto-dr-pedro.webp, que já estão lá).
+   Se for um domínio/pasta nova, copie esses 3 arquivos junto.
+2. Abra o index.html e preencha, no começo do script:
+   - CHECKOUT_URL  → já preenchido (F108215265I, R$ 47, com src=quiz_calor).
+   - APPS_SCRIPT_URL → URL /exec do Apps Script da planilha "quiz calorão" (vazio = não salva nada).
+     Use o arquivo Codigo-AppsScript.gs: ele cria 3 abas sozinho:
+       · respostas → cada clique (sessão anônima, passo, pergunta, resposta) — serve para ver onde desistem e o que mais marcam
+       · leads → quem deixou WhatsApp, com gatilho, sinal e todas as respostas em colunas
+       · resumo → menu "Quiz > Atualizar resumo" monta o funil e o ranking de respostas
+     Há duas versões da página: index.html (escura) e index_claro.html (clara). Publique uma ou as duas para testar.
+3. Pixel: está o mesmo ID do quiz anterior (873230481338340). Eventos: ViewContent "quiz_calor_iniciado",
+   QuizStep, Lead, InitiateCheckout, ViewContent "resultado_calor_visto".
+4. Para testar a tela de resultado sem responder tudo: abra index.html?resultado=1
+5. Depoimentos usados (da pasta 3 PROVAS SOCIAIS/provas prints): pausa = 03.JPG (Vilma);
+   resultado = 94.jpg, 04.JPG, 146.PNG, 235.PNG, 156.PNG. Todos falam de calorão/fogacho, nenhum de peso.
