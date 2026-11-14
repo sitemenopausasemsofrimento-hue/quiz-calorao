@@ -574,7 +574,7 @@ function dispararEventoMeta(eventName, extraParams){
 // >>> COLE AQUI o link de checkout do Protocolo Xô Calorão (Hotmart, R$ 47). O "src=quiz_calor" separa as vendas do quiz no relatório.
 const CHECKOUT_URL = 'https://pay.hotmart.com/F108215265I?off=kb5fb8iv&checkoutMode=10&src=quiz_calor';
 // >>> COLE AQUI a URL /exec do Apps Script ligado à planilha "quiz calorão". Vazia = o quiz funciona, mas não salva leads.
-const APPS_SCRIPT_URL = '';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwciD0NmWoUBw1B4XUKPwArSCE7kj7leJ-4QC_l0dvvCYt-Nj50zSSVfUuhLKlCPkL_/exec';
 
 // código anônimo por pessoa (fica no navegador), para juntar as respostas na planilha
 const SESSAO_ID = (function(){ try{ let s=localStorage.getItem('quizCalorSessao'); if(!s){ s=Date.now().toString(36)+Math.random().toString(36).slice(2,8); localStorage.setItem('quizCalorSessao',s);} return s; }catch(e){ return 'anon'+Date.now().toString(36); } })();
